@@ -1,0 +1,44 @@
+<!--calculator-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+    <script src="calculator.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="input">
+            <input type="text" id="inpt" name="ip" pattern="[0-9+\-*/.]*" oninput="this.value = this.value.replace(/[^0-9+\-*/.%]/g, '')" autofocus>
+        </div>
+        <div class="output"><hr>
+            <h4>Answer: </h4>
+            <output id="out" name="op" ></output><hr>
+        </div>
+        <div class="keys">
+            <button onclick="showValue('9')">9</button>
+            <button onclick="showValue('8')">8</button>
+            <button onclick="showValue('7')">7</button>
+            <button onclick="showValue('+')">+</button>
+            <button style="width: 100px;" onclick="deleteSingleValue()">Delete</button><br>
+            <button onclick="showValue('6')">6</button>
+            <button onclick="showValue('5')">5</button>
+            <button onclick="showValue('4')">4</button>
+            <button onclick="showValue('-')">-</button>
+            <button style="width: 100px" onclick="clearAll()">Clear All</button><br>
+            <button onclick="showValue('3')">3</button>
+            <button onclick="showValue('2')">2</button>
+            <button onclick="showValue('1')">1</button>
+            <button onclick="showValue('/')">/</button><br>
+            <button onclick="showValue('00')">00</button>
+            <button onclick="showValue('0')">0</button>
+            <button onclick="showValue('.')">.</button>
+            <button onclick="showValue('*')">*</button><br>
+            <button style="width: 113px;" onclick="showValue('%')">Modulo</button>
+            <button style="width: 113px;" onclick="calculate()">=</button>
+        </div>
+    </div>
+</body>
+</html>
